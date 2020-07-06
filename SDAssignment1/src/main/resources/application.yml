@@ -1,0 +1,43 @@
+
+server:
+  port: 8087
+  
+spring:
+  application:
+    name: SDAssignment1
+  datasource:
+    url: jdbc:mysql://localhost:3306/javapg
+    username: root 
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    
+ 
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    database: mysql
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true 
+ 
+  data:
+    jpa:
+      repositories:
+        enabled: true 
+ 
+
+ 
+logging:
+  level:
+    httpclient.wire: DEBUG  
+    pattern: '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+  
+   
+
+
+
+
+
+
+      
+    
